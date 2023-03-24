@@ -6,7 +6,7 @@
     "scripts": {
         "build": "",
         "test": "echo \"No test specified\" && exit 1",
-        "start": "node index.js"
+        "start": "html e-commerce.html"
     },
     "repository": {
         "type": "git",
