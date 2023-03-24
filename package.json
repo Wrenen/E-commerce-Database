@@ -2,11 +2,10 @@
     "name": "E-commerce-Database",
     "version": "1.0.0",
     "description": "An E-commerce web app with a database for CP363by group 10",
-     "main": "e-commerce.html",
+     "main": "index.js",
     "scripts": {
-        "build": "",
-        "test": "echo \"No test specified\" && exit 1",
-        "start": "html e-commerce.html"
+        "start": "node server.js",
+        "test": "echo \"No test specified\" && exit 1"
     },
     "repository": {
         "type": "git",
