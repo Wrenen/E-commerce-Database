@@ -1,10 +1,6 @@
 <?php
 // Connect to database
-$servername = "127.0.0.1";
-$username = "root";
-$password = "";
-$dbname = "E-commerce";
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+include_once 'includes/connection.php';
 
 // Check connection
 if (!$conn) {
@@ -47,6 +43,8 @@ if (isset($_POST['submit'])) {
 mysqli_close($conn);
 ?>
 
+<h2>Create Tables</h2>
+
 <!-- Create HTML form to input table and column names -->
 <form method="post">
     <label for="tableName">Table Name:</label>
@@ -82,3 +80,5 @@ mysqli_close($conn);
     </select><br><br>
     <input type="submit" name="submit" value="Create Table">
 </form>
+
+<a href="index.php">Return</a>
