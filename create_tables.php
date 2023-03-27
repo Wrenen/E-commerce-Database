@@ -51,6 +51,11 @@ mysqli_close($conn);
 <form method="post">
     <label for="tableName">Table Name:</label>
     <input type="text" name="tableName"><br><br>
+    <label for="id">ID:</label>
+    <input type = "text" name= "table_id">
+    <select name="column1Type">
+        <option value="INT">INT</option>
+    </select><br><br>
     <label for="column1Name">Column 1 Name:</label>
     <input type="text" name="column1Name">
     <label for="column1Type">Column 1 Type:</label>
