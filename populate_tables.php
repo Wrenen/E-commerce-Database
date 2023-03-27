@@ -3,11 +3,8 @@
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     // Connect to MySQL database
-    $servername = "127.0.0.1";
-    $username = "root";
-    $password = "";
-    $dbname = "E-commerce";
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    include_once 'includes/connection.php';
+    
     // Check connection
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
@@ -51,7 +48,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
+<h2>Populate Tables</h2>
+
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
     Enter table name: <input type="text" name="tablename"><br>
     <input type="submit" value="Submit">
 </form>
+
+<a href="index.php">Return</a>
