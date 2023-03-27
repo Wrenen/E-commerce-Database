@@ -10,16 +10,14 @@
             <input type="text" name="tablename" id ="tablename"><br>
             <input type="submit" value="Delete Table">
         </form> 
+
+    <a href="index.php">Return</a>
 </body>
 </html>
 
 <?php
     // Connect to MySQL database
-    $servername = "127.0.0.1";
-    $username = "root";
-    $password = "";
-    $dbname = "E-commerce";
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    include_once 'includes/connection.php';
     // Check connection
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
@@ -36,4 +34,3 @@
 
     mysqli_close($conn);
     ?>
- 
