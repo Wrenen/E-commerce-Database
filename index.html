@@ -13,47 +13,12 @@
 <body>
     <h1>E-commerce Database Website</h1>
 
-    <input type="button" value ="Create Table" onclick="displayCreate();">
-    <input type="button" value ="Populate Table" onclick="displayPopulate();">
-    <input type="button" value ="Query" onclick="displayQuery();">
-    <input type="button" value ="Drop Table" onclick="displayDrop();">
-
     <script src ="results.js"></script>
 
-    <div id = "create" style="display:none">
-        <h2>Create Tables</h2>
-        <input type="button" value ="Hide" onclick="hideCreate();">
-    </div>
+    <a href="create_tables.php">Create Table</a>
+    <a href="populate_tables.php">Populate Table</a>
+    <a href="query.php">Query</a>
+    <a href="drop_tables.php">Drop Table</a>
 
-    <div id = "populate" style="display:none">
-        <h2>Populate Tables</h2>
-        <input type="button" value ="Hide" onclick="hidePopulate();">
-    </div>
-
-    <div id = "query" style="display:none">
-        <h2>Queries</h2>
-        <p>
-            <?php
-                $sql = "SELECT * FROM product;";   
-                $result = mysqli_query($conn, $sql);
-                $resultCheck = mysqli_num_rows($result);
-
-                echo "Id Category Product_name Quantity stock Price prodimg description rating <br>";
-                if ($resultCheck > 0){
-                    while ($row = mysqli_fetch_assoc($result)){
-                        echo $row['id'] ."      ". $row['category'] ."      ". $row['product_name'] ."      ". $row['quantity_stock'] ."    ". $row['price'] ."     ". $row['product_image'] ."     ". $row['product_description'] ."       ". $row['rating'] ."<br>";
-                    }
-                }
-            
-            ?>
-            <input type="button" value ="Hide" onclick="hideQuery();">
-        </p>
-    </div>
-
-    <div id = "drop" style="display:none">
-        <h2>Drop Tables</h2>
-        <input type="button" value ="Hide" onclick="hideDrop();">
-    </div>
-    
 </body>
 </html>
